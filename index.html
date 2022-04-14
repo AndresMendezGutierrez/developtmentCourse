@@ -4,6 +4,12 @@
 <head>
     <title>Ejercicio 1</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("darkMode");
+        }
+    </script>
 </head>
 
 <body>
@@ -25,6 +31,9 @@
                 </li>
             </ul>
         </nav>
+        <p>Alternar modo
+            <button onclick="myFunction()" class="mode">oscuro / claro</button>
+        </p>
     </header>
     <div class="container">
         <aside class="asideContainer">

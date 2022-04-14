@@ -1,3 +1,8 @@
+:root {
+    /* Este es el espacio de variables de CSS */
+    --color-hover: #41c7f4a8;
+}
+
 /*Reset sets*/
 * {
     margin: 0;
@@ -8,6 +13,53 @@
     outline: none;
     font-family: Verdana;
 }
+
+a {
+    color: black;
+}
+
+/* DARK - MODE */
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+.darkMode a {
+    color: white;
+}
+
+.darkMode .header {
+    background-color: black;
+    color: white;
+}
+
+.darkMode .header {
+    border-bottom: 1px solid white;
+}
+
+.darkMode .mode {
+    color: white;
+}
+
+.darkMode .navContainer ul li {
+    border-color: white;
+}
+
+.darkMode .asideContainer {
+    border-right: 1px solid white;
+}
+
+.darkMode .taskSection ul li {
+    border-bottom: 1px solid white;
+}
+
+.mode {
+    background-color: transparent;
+    font-family: Verdanda;
+    font-size: 20px;
+}
+
+
 
 /* header */
 .header {
@@ -30,6 +82,10 @@
     padding: 15px;
 }
 
+.headerNav ul li:hover {
+    background-color: #41c7f4;
+}
+
 /* Container */
 .container {
     display: flex;
@@ -45,8 +101,14 @@ aside {
 }
 
 .navContainer ul li {
+    display: flex;
+    align-items: center;
     padding: 15px;
     border-bottom: 1px solid black;
+}
+
+.navContainer ul li:hover {
+    background-color: #ff6347;
 }
 
 .asideImg {
@@ -64,8 +126,9 @@ aside {
 .mainContainer input {
     height: 40px;
     width: 400px;
-    border: 1px solid black;
+    border: 1px solid #ff6347;
     border-radius: 5px;
+
 }
 
 .mainContainer button {
@@ -73,14 +136,23 @@ aside {
     width: 80px;
     border-radius: 5px;
     background-color: tomato;
-    margin-left: 20px;
+    margin: 10px 20px;
+}
+
+.mainContainer button:hover {
+    background-color: #ff6347a5;
 }
 
 .taskSection {
     border: 2px solid #41c8f4;
     max-width: 500px;
+    width: 100%;
     display: block;
     margin: 10px auto;
+}
+
+.taskSection ul li:last-child {
+    border-bottom: none;
 }
 
 .taskSection ul li {
