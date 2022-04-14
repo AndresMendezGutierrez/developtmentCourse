@@ -12,11 +12,11 @@
 .header {
     background-color: tomato;
     text-align: center;
-    border-bottom: 5px solid black;
+    box-shadow: 0px -2px 9px 0px black;
 }
 
 .headerImg {
-    width: 150px;
+    width: 80px;
     margin: 20px auto;
 }
 
