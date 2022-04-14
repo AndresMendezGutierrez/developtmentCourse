@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 :root {
     /* Este es el espacio de variables de CSS */
     --color-hover-blue: #41c7f4a8;
@@ -20,7 +22,6 @@ a {
     color: black;
 }
 
-/* -------------------------------------------------- */
 /* -------------------------------------------------- */
 /* header */
 /* -------------------------------------------------- */
@@ -71,7 +72,6 @@ a {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
     transition: .4s;
 }
 
@@ -95,6 +95,7 @@ input:checked+.buttonDarkMode:before {
     border-radius: 50%;
 }
 
+/* -------------------------------------------------- */
 .headerImg {
     width: 80px;
     margin: 20px auto;
@@ -154,6 +155,10 @@ aside {
     cursor: pointer;
 }
 
+.navContainer ul li a {
+    margin-left: 20px;
+}
+
 .asideImg {
     width: 30px;
     padding-right: 5px;
@@ -168,7 +173,8 @@ aside {
 
 .mainContainer input {
     height: 40px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     border: 1px solid #ff6347;
     border-radius: 5px;
 
