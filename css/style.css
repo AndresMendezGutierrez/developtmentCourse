@@ -56,13 +56,28 @@ aside {
 
 /* MAIN */
 .mainContainer {
-    background-color: burlywood;
     width: 70%;
     text-align: center;
+    padding: 30px;
+}
+
+.mainContainer input {
+    height: 40px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.mainContainer button {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: tomato;
+    margin-left: 20px;
 }
 
 .taskSection {
-    border: 2px solid bisque;
+    border: 2px solid #41c8f4;
     max-width: 500px;
     display: block;
     margin: 10px auto;
@@ -72,6 +87,7 @@ aside {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid black;
+    padding: 15px;
 }
 
 .completedTask {
