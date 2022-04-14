@@ -40,11 +40,11 @@ aside {
     width: 30%;
 }
 
-.containerAside {
+.asideContainer {
     border-right: 1px solid black;
 }
 
-.containerNav ul li {
+.navContainer ul li {
     padding: 15px;
     border-bottom: 1px solid black;
 }
@@ -52,4 +52,28 @@ aside {
 .asideImg {
     width: 30px;
     padding-right: 5px;
+}
+
+/* MAIN */
+.mainContainer {
+    background-color: burlywood;
+    width: 70%;
+    text-align: center;
+}
+
+.taskSection {
+    border: 2px solid bisque;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto;
+}
+
+.taskSection ul li {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.completedTask {
+    text-decoration: line-through;
 }
