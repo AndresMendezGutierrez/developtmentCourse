@@ -9,6 +9,7 @@
     font-family: Verdana;
 }
 
+/* header */
 .header {
     background-color: tomato;
     text-align: center;
@@ -27,4 +28,28 @@
 
 .headerNav ul li {
     padding: 15px;
+}
+
+/* Container */
+.container {
+    display: flex;
+}
+
+/* Aside */
+aside {
+    width: 30%;
+}
+
+.containerAside {
+    border-right: 1px solid black;
+}
+
+.containerNav ul li {
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.asideImg {
+    width: 30px;
+    padding-right: 5px;
 }
