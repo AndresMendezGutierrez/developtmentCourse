@@ -1,6 +1,7 @@
 :root {
     /* Este es el espacio de variables de CSS */
-    --color-hover: #41c7f4a8;
+    --color-hover-blue: #41c7f4a8;
+    --color-hover-tomato: #ff6347a5;
 }
 
 /*Reset sets*/
@@ -55,6 +56,19 @@ a {
 
 .darkMode .mainContainer input {
     border: 1px solid #41c7f4a8;
+}
+
+.darkMode .mainContainer button {
+    background-color: #41c7f4;
+}
+
+.darkMode .mainContainer button:hover {
+    background-color: var(--color-hover-blue);
+}
+
+
+.darkMode .taskSection ul li:hover {
+    background-color: var(--color-hover-blue);
 }
 
 .mode {
@@ -146,11 +160,15 @@ aside {
 }
 
 .mainContainer button:hover {
-    background-color: #ff6347a5;
+    background-color: var(--color-hover-tomato);
+}
+
+.taskSection ul li:hover {
+    background-color: var(--color-hover-tomato);
 }
 
 .taskSection {
-    border: 2px solid #41c8f4;
+    border: 2px solid tomato;
     max-width: 500px;
     width: 100%;
     display: block;
