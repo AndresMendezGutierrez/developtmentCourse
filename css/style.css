@@ -53,6 +53,10 @@ a {
     border-bottom: 1px solid white;
 }
 
+.darkMode .mainContainer input {
+    border: 1px solid #41c7f4a8;
+}
+
 .mode {
     background-color: transparent;
     font-family: Verdanda;
@@ -100,6 +104,7 @@ aside {
     border-right: 1px solid black;
 }
 
+
 .navContainer ul li {
     display: flex;
     align-items: center;
@@ -109,6 +114,7 @@ aside {
 
 .navContainer ul li:hover {
     background-color: #ff6347;
+    cursor: pointer;
 }
 
 .asideImg {
