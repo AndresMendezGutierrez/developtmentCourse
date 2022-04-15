@@ -37,6 +37,10 @@ a {
     box-shadow: 0px -2px 9px 0px black;
 }
 
+.hamburgerMenu {
+    display: none;
+}
+
 .container-dark-mode {
     position: absolute;
     top: 10px;
@@ -302,69 +306,6 @@ aside {
 }
 
 /* -------------------------------------------------- */
-/* @@@@@@@@@@@@@@@@@    MEDIA - QUERY  @@@@@@@@@@@@@@@@@@@ */
-/* -------------------------------------------------- */
-@media (max-width: 668px) {
-    .asideContainer {
-        display: none;
-    }
-
-    .mainContainer {
-        width: 100%;
-    }
-
-    .containerControls {
-        width: 100%;
-        margin: 10px auto;
-        flex-direction: column;
-    }
-
-    .containerControls input {
-        width: 100%;
-        max-width: none;
-    }
-
-    .containerControls button {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .header {
-        padding-top: 20px;
-    }
-
-    .headerImg {
-        width: 40px;
-        display: block;
-        margin: initial;
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-/* 
-    .headerNav {
-        display: none;
-    } */
-
-.headerNav ul {
-    flex-direction: column;
-}
-
-.headerNav ul li {
-    border-bottom: 1px solid white;
-}
-
-.headerNav ul li:first-child {
-    border-top: 1px solid white;
-}
-
-.headerNav ul li:last-child {
-    border-bottom: none;
-}
-
-
-/* -------------------------------------------------- */
 /* DARK - MODE */
 /* -------------------------------------------------- */
 .darkMode {
@@ -427,4 +368,111 @@ aside {
 
 .darkMode .taskSection ul li:hover {
     background-color: var(--color-hover-blue);
+}
+
+
+/* -------------------------------------------------- */
+/* @@@@@@@@@@@@@@@@@    MEDIA - QUERY  @@@@@@@@@@@@@@@@@@@ */
+/* -------------------------------------------------- */
+@media (max-width: 688px) {
+    .container-dark-mode {
+        display: none;
+    }
+
+    .asideContainer {
+        display: none;
+    }
+
+    .mainContainer {
+        width: 100%;
+    }
+
+    .containerControls {
+        width: 100%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+
+    .containerControls input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .containerControls button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header {
+        padding-top: 15px;
+        padding-bottom: 1px;
+    }
+
+    .hamburgerMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 28px;
+        font-size: 22px;
+        color: white;
+    }
+
+    .headerImg {
+        width: 40px;
+        display: block;
+        margin: initial;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .headerNav {
+        display: none;
+    }
+
+    .headerNav ul {
+        flex-direction: column;
+    }
+
+    .headerNav ul li {
+        border-bottom: 1px solid white;
+    }
+
+    .headerNav ul li:first-child {
+        border-top: 1px solid white;
+    }
+
+    .headerNav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .taskSection ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .taskSection ul li {
+        width: 48%;
+        height: 100px;
+        align-items: center;
+        padding: 0px;
+        border-radius: 8px;
+        border: none;
+        box-shadow: inset 0px 0px 5px 1px #2196f3;
+        margin: 5px 1%;
+        background-color: yellowgreen;
+    }
+
+    .taskSection ul li:nth-of-type(3n-1) {
+        background-color: var(--color-hover-tomato);
+    }
+
+    .taskSection ul li:nth-of-type(3n-0) {
+        background-color: var(--color-hover-blue);
+    }
+
+    .darkMode .taskSection ul li {
+        border: none;
+    }
 }
