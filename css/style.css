@@ -476,3 +476,63 @@ aside {
         border: none;
     }
 }
+
+@media (min-width: 689px) and (max-width: 1024px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerImg {
+        width: 60px;
+        margin: initial;
+        margin-left: 20px;
+    }
+
+    .headerNav ul li {
+        width: 80px;
+        padding: 20px;
+    }
+
+    /* 
+    .container-dark-mode {
+        display: none;
+    }
+ */
+    .taskSection {
+        max-width: 90%;
+    }
+
+    .taskSection ul {
+        height: 600px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .containerControls {
+        width: 90%;
+    }
+
+    .taskSection ul li {
+        text-align: center;
+        padding: 20px 0;
+        border: 0px;
+        background-color: yellowgreen;
+        border-radius: 8px;
+        box-shadow: inset 0px 0px 5px 1px #2195f372;
+        display: flex;
+        align-items: center;
+    }
+
+    .taskSection ul li:nth-of-type(5n-1) {
+        background-color: var(--color-hover-tomato);
+    }
+
+    .taskSection ul li:nth-of-type(2n+0) {
+        background-color: var(--color-hover-blue);
+    }
+
+}
