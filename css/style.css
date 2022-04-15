@@ -168,12 +168,20 @@ aside {
 .mainContainer {
     width: 70%;
     text-align: center;
-    padding: 30px;
+    padding: 16px;
+}
+
+.containerControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .mainContainer input {
     height: 40px;
-    max-width: 400px;
+    max-width: 350px;
     width: 100%;
     border: 1px solid #ff6347;
     border-radius: 5px;
@@ -185,7 +193,6 @@ aside {
     width: 80px;
     border-radius: 5px;
     background-color: tomato;
-    margin: 10px 20px;
     font-size: 2rem;
     color: white;
 }
