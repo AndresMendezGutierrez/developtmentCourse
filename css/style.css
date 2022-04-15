@@ -7,6 +7,11 @@
     --background-color-dark-mode: rgba(63, 62, 62, 0.793);
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /*Reset sets*/
 * {
     margin: 0;
@@ -294,6 +299,68 @@ aside {
     50% {
         opacity: 1;
     }
+}
+
+/* -------------------------------------------------- */
+/* @@@@@@@@@@@@@@@@@    MEDIA - QUERY  @@@@@@@@@@@@@@@@@@@ */
+/* -------------------------------------------------- */
+@media (max-width: 668px) {
+    .asideContainer {
+        display: none;
+    }
+
+    .mainContainer {
+        width: 100%;
+    }
+
+    .containerControls {
+        width: 100%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+
+    .containerControls input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .containerControls button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header {
+        padding-top: 20px;
+    }
+
+    .headerImg {
+        width: 40px;
+        display: block;
+        margin: initial;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* 
+    .headerNav {
+        display: none;
+    } */
+
+.headerNav ul {
+    flex-direction: column;
+}
+
+.headerNav ul li {
+    border-bottom: 1px solid white;
+}
+
+.headerNav ul li:first-child {
+    border-top: 1px solid white;
+}
+
+.headerNav ul li:last-child {
+    border-bottom: none;
 }
 
 
