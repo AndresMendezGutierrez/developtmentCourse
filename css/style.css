@@ -1,6 +1,15 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 :root {
     /* Este es el espacio de variables de CSS */
-    --color-hover: #41c7f4a8;
+    --color-hover-blue: #41c7f4a8;
+    --color-hover-tomato: #ff6347a5;
+    --background-color-dark-mode: rgba(63, 62, 62, 0.793);
+}
+
+html,
+body {
+    height: 100%;
 }
 
 /*Reset sets*/
@@ -18,63 +27,97 @@ a {
     color: black;
 }
 
-/* DARK - MODE */
-.darkMode {
-    background-color: black;
-    color: white;
-}
-
-.darkMode a {
-    color: white;
-}
-
-.darkMode .header {
-    background-color: black;
-    color: white;
-}
-
-.darkMode .header {
-    border-bottom: 1px solid white;
-}
-
-.darkMode .mode {
-    color: white;
-}
-
-.darkMode .navContainer ul li {
-    border-color: white;
-}
-
-.darkMode .asideContainer {
-    border-right: 1px solid white;
-}
-
-.darkMode .taskSection ul li {
-    border-bottom: 1px solid white;
-}
-
-.darkMode .mainContainer input {
-    border: 1px solid #41c7f4a8;
-}
-
-.mode {
-    background-color: transparent;
-    font-family: Verdanda;
-    font-size: 20px;
-}
-
-
-
+/* -------------------------------------------------- */
 /* header */
+/* -------------------------------------------------- */
+
 .header {
     background-color: tomato;
     text-align: center;
     box-shadow: 0px -2px 9px 0px black;
 }
 
+.hamburgerMenu {
+    display: none;
+}
+
+.container-dark-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.buttonDarkMode {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.buttonDarkMode:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.buttonDarkMode {
+    background-color: #41c7f4;
+}
+
+input:focus+.buttonDarkMode {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.buttonDarkMode:before {
+    transform: translateX(26px);
+}
+
+.buttonDarkMode.round {
+    border-radius: 34px;
+}
+
+.buttonDarkMode.round:before {
+    border-radius: 50%;
+}
+
+/* -------------------------------------------------- */
 .headerImg {
     width: 80px;
     margin: 20px auto;
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.headerImg:hover {
+    /*     animation: rotateLogo 1s infinite linear;*/
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 .headerNav ul {
@@ -90,12 +133,16 @@ a {
     background-color: #41c7f4;
 }
 
+/* -------------------------------------------------- */
 /* Container */
+/* -------------------------------------------------- */
 .container {
     display: flex;
 }
 
+/* -------------------------------------------------- */
 /* Aside */
+/* -------------------------------------------------- */
 aside {
     width: 30%;
 }
@@ -117,6 +164,10 @@ aside {
     cursor: pointer;
 }
 
+.navContainer ul li a {
+    margin-left: 20px;
+}
+
 .asideImg {
     width: 30px;
     padding-right: 5px;
@@ -126,12 +177,21 @@ aside {
 .mainContainer {
     width: 70%;
     text-align: center;
-    padding: 30px;
+    padding: 16px;
+}
+
+.containerControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .mainContainer input {
     height: 40px;
-    width: 400px;
+    max-width: 350px;
+    width: 100%;
     border: 1px solid #ff6347;
     border-radius: 5px;
 
@@ -142,15 +202,20 @@ aside {
     width: 80px;
     border-radius: 5px;
     background-color: tomato;
-    margin: 10px 20px;
+    font-size: 2rem;
+    color: white;
 }
 
 .mainContainer button:hover {
-    background-color: #ff6347a5;
+    background-color: var(--color-hover-tomato);
+}
+
+.taskSection ul li:hover {
+    background-color: var(--color-hover-tomato);
 }
 
 .taskSection {
-    border: 2px solid #41c8f4;
+    border: 2px solid tomato;
     max-width: 500px;
     width: 100%;
     display: block;
@@ -164,10 +229,310 @@ aside {
 .taskSection ul li {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color-hover-tomato);
     padding: 15px;
 }
 
 .completedTask {
     text-decoration: line-through;
+}
+
+/* ----------------------------------------- */
+/* ANIMATIONS */
+/* ----------------------------------------- */
+@keyframes rotateLogo {
+    0% {
+        transform: rotateY(2deg);
+    }
+
+    20% {
+        transform: rotateY(72deg);
+    }
+
+    40% {
+        transform: rotateY(144deg);
+    }
+
+    60% {
+        transform: rotateY(216deg);
+    }
+
+    80% {
+        transform: rotateY(288deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes tada {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------- */
+/* DARK - MODE */
+/* -------------------------------------------------- */
+.darkMode {
+    background-color: var(--background-color-dark-mode);
+    color: white;
+}
+
+.darkMode a {
+    color: white;
+}
+
+.darkMode .header {
+    background-color: var(--background-color-darkMode);
+    color: white;
+}
+
+.darkMode .header {
+    border-bottom: 1px solid white;
+}
+
+.darkMode .mode {
+    color: white;
+}
+
+.darkMode .navContainer ul li {
+    border-color: white;
+}
+
+.darkMode .asideContainer {
+    border-right: 1px solid white;
+}
+
+.darkMode .navContainer ul li:hover {
+    background-color: var(--color-hover-blue);
+}
+
+.darkMode .taskSection ul li {
+    border-bottom: 1px solid var(--color-hover-blue);
+}
+
+.darkMode .mainContainer input {
+    border: 1px solid #41c7f4a8;
+}
+
+.darkMode .mainContainer button {
+    background-color: #41c7f4;
+}
+
+.darkMode .mainContainer button:hover {
+    background-color: var(--color-hover-blue);
+}
+
+.darkMode .taskSection {
+    border: 2px solid var(--color-hover-blue);
+}
+
+.darkMode .taskSection ul li:last-child {
+    border-bottom: none;
+}
+
+.darkMode .taskSection ul li:hover {
+    background-color: var(--color-hover-blue);
+}
+
+
+/* -------------------------------------------------- */
+/* @@@@@@@@@@@@@@@@@    MEDIA - QUERY  @@@@@@@@@@@@@@@@@@@ */
+/* -------------------------------------------------- */
+@media (max-width: 688px) {
+    .container-dark-mode {
+        display: none;
+    }
+
+    .asideContainer {
+        display: none;
+    }
+
+    .mainContainer {
+        width: 100%;
+    }
+
+    .containerControls {
+        width: 100%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+
+    .containerControls input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .containerControls button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header {
+        padding-top: 15px;
+        padding-bottom: 1px;
+    }
+
+    .hamburgerMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 28px;
+        font-size: 22px;
+        color: white;
+    }
+
+    .headerImg {
+        width: 40px;
+        display: block;
+        margin: initial;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .headerNav {
+        display: none;
+    }
+
+    .headerNav ul {
+        flex-direction: column;
+    }
+
+    .headerNav ul li {
+        border-bottom: 1px solid white;
+    }
+
+    .headerNav ul li:first-child {
+        border-top: 1px solid white;
+    }
+
+    .headerNav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .taskSection ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .taskSection ul li {
+        width: 48%;
+        height: 100px;
+        align-items: center;
+        padding: 0px;
+        border-radius: 8px;
+        border: none;
+        box-shadow: inset 0px 0px 5px 1px #2196f3;
+        margin: 5px 1%;
+        background-color: yellowgreen;
+    }
+
+    .taskSection ul li:nth-of-type(3n-1) {
+        background-color: var(--color-hover-tomato);
+    }
+
+    .taskSection ul li:nth-of-type(3n-0) {
+        background-color: var(--color-hover-blue);
+    }
+
+    .darkMode .taskSection ul li {
+        border: none;
+    }
+}
+
+@media (min-width: 689px) and (max-width: 1024px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerImg {
+        width: 60px;
+        margin: initial;
+        margin-left: 20px;
+    }
+
+    .headerNav ul li {
+        width: 80px;
+        padding: 20px;
+    }
+
+    /* 
+    .container-dark-mode {
+        display: none;
+    }
+ */
+    .taskSection {
+        max-width: 90%;
+    }
+
+    .taskSection ul {
+        height: 600px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .containerControls {
+        width: 90%;
+    }
+
+    .taskSection ul li {
+        text-align: center;
+        padding: 20px 0;
+        border: 0px;
+        background-color: yellowgreen;
+        border-radius: 8px;
+        box-shadow: inset 0px 0px 5px 1px #2195f372;
+        display: flex;
+        align-items: center;
+    }
+
+    .taskSection ul li:nth-of-type(5n-1) {
+        background-color: var(--color-hover-tomato);
+    }
+
+    .taskSection ul li:nth-of-type(2n+0) {
+        background-color: var(--color-hover-blue);
+    }
+
 }

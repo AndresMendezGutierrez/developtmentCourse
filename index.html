@@ -3,7 +3,9 @@
 
 <head>
     <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script>
         function myFunction() {
             var element = document.body;
@@ -14,7 +16,16 @@
 
 <body>
     <header class="header">
+        <div class="container-dark-mode">
+            <label class="switch">
+                <input type="checkbox" onclick="myFunction()">
+                <span class="buttonDarkMode round"></span>
+            </label>
+        </div>
         <img src="/assets/img/img1.png" alt="Header image" class="headerImg">
+        <span class="hamburgerMenu">
+            <i class="bi bi-three-dots-vertical" onclick="myFunction()"></i>
+        </span>
         <nav class="headerNav">
             <ul>
                 <li>
@@ -31,40 +42,39 @@
                 </li>
             </ul>
         </nav>
-        <p>Alternar modo
-            <button onclick="myFunction()" class="mode">oscuro / claro</button>
-        </p>
     </header>
     <div class="container">
         <aside class="asideContainer">
             <nav class="navContainer">
                 <ul>
                     <li>
-                        <img src="/assets/img/img1.png" alt="Imagen de aside" class="asideImg">
-                        <a href="index.html" alt="Menú de aside">Opción 1</a>
+                        <i class="bi bi-person-bounding-box animate__animated animate__rubberBand"></i>
+                        <a href="index.html" alt="Menú de aside">User </a>
                     </li>
                     <li>
-                        <img src="/assets/img/img1.png" alt="Imagen de aside" class="asideImg">
-                        <a href="index.html" alt="Menú de aside">Opción 2</a>
+                        <i class="bi bi-battery-charging animate__animated animate__flash"></i>
+                        <a href="index.html" alt="Menú de aside">Charging </a>
                     </li>
                     <li>
-                        <img src="/assets/img/img1.png" alt="Imagen de aside" class="asideImg">
-                        <a href="index.html" alt="Menú de aside">Opción 3</a>
+                        <i class="bi bi-cpu-fill animate__animated animate__zoomIn"></i>
+                        <a href="index.html" alt="Menú de aside">CPU </a>
                     </li>
                     <li>
-                        <img src="/assets/img/img1.png" alt="Imagen de aside" class="asideImg">
-                        <a href="index.html" alt="Menú de aside">Opción 4</a>
+                        <i class="bi bi-badge-3d-fill animate__animated animate__rotateIn"></i>
+                        <a href="index.html" alt="Menú de aside">3D </a>
                     </li>
                     <li>
-                        <img src="/assets/img/img1.png" alt="Imagen de aside" class="asideImg">
-                        <a href="index.html" alt="Menú de aside">Opción 5</a>
+                        <i class="bi bi-activity animate__animated animate__heartBeat"></i>
+                        <a href="index.html" alt="Menú de aside">Activity </a>
                     </li>
                 </ul>
             </nav>
         </aside>
         <main class="mainContainer">
-            <input type="text">
-            <button>Añadir</button>
+            <div class="containerControls">
+                <input type="text">
+                <button> <i class="bi bi-plus"></i> </button>
+            </div>
             <h1>Tareas</h1>
             <section class="taskSection">
                 <ul>
@@ -75,6 +85,8 @@
                     <li>Tarea 5</li>
                     <li>Tarea 6</li>
                     <li>Tarea 7</li>
+                    <li>Tarea 8</li>
+                    <li>Tarea 9</li>
                 </ul>
             </section>
         </main>
